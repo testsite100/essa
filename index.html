@@ -134,6 +134,13 @@
     .tabs { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
     .tab { padding: .4rem 1.2rem; font-size: .75rem; font-weight: 600; cursor: pointer; border: 2px solid var(--text-light); background: transparent; color: var(--text-light); }
     .tab.active { background: var(--text-light); color: var(--bg-dark); }
+    
+    /* make the bio paragraph smaller */
+#coach-bio {
+  font-size: 0.75rem;   /* try 0.85rem if still too large */
+  line-height: 1.5;    /* keep it readable */
+  color: var(--text-light);
+}
 
     /* ---------- FOOTER ---------- */
     footer { padding: 3rem 2rem; text-align: center; font-size: .85rem; background: var(--bg-darker); color: var(--text-grey); }
@@ -267,10 +274,6 @@
       zac: {
         img: 'coach-zac.jpg',
         bio: 'Coach Zachary is the founder of ESS Academy, licensed through FC Barcelona & U.S. Soccer pathways. With a proven track record of nurturing MLS Next athletes, he specializes in fusing technical detail with mental resilience.'
-      },
-      alex: {
-        img: 'coach-alex.jpg',
-        bio: 'Coach Alex brings European academy experience, focusing on high‑tempo positional play and ball retention under pressure.'
       }
     }
     function showCoach(id, el) {
