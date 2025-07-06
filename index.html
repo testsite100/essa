@@ -60,7 +60,7 @@
       text-align: center;
       background: url('website cover.png') center/cover no-repeat;
     }
-    .hero::after { /* dark overlay */
+    .hero::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -99,11 +99,15 @@
 
     /* ---------- WHO ARE WE IMAGE ---------- */
     .img-right {
-      width: 800px;
-      height: 800px;
+      width: 100%;            /* responsive width */
+      max-width: 800px;       /* do not exceed 800px */
+      height: auto;           /* keep aspect ratio */
       object-fit: cover;
-      margin-top: 2rem;
+      display: block;         /* block so margin works */
+      margin: 2rem 0 0 auto;  /* push to the right */
+      border-radius: 6px;     /* soft corner like CBM */
     }
+
     /* ---------- FRAMEWORK ---------- */
     .framework-item { margin-bottom: 3rem; }
     .framework-item h4 {
@@ -134,6 +138,7 @@
       .split { grid-template-columns: 1fr; }
       .slash-title { margin-bottom: 1.5rem; }
       .coach-wrap { grid-template-columns: 1fr; }
+      .img-right { margin-left: auto; margin-right: auto; }
     }
   </style>
 </head>
@@ -156,16 +161,16 @@
   <section id="who">
     <div class="inner split">
       <h2 class="slash-title">Who Am I?</h2>
-      <p>Welcome to <strong>ESS Academy</strong>, a soccer development academy dedicated to guiding athletes from grassroots to the professional game.  We cultivate a culture that marries <em>technical mastery</em> with <em>mental resilience</em>, ensuring players not only survive but excel under elite‑level stress.  Founded by Zachary Scheufele, ESS brings Barça‑inspired methodology and MLS Next‑proven results to athletes committed to a genuine, lasting transformation.</p>
+      <p>Welcome to <strong>ESS Academy</strong>, a soccer development academy dedicated to guiding athletes from grassroots to the professional game. We cultivate a culture that marries <em>technical mastery</em> with <em>mental resilience</em>, ensuring players not only survive but excel under elite‑level stress. Founded by Zachary Scheufele, ESS brings Barça‑inspired methodology and MLS Next‑proven results to athletes committed to a genuine, lasting transformation.</p>
     </div>
-    <img src="Who are we image.png" alt="Player training" class="img-right"/>
+    <img src="Who are we image.png" alt="Player training" class="img-right" />
   </section>
-  
+
   <!-- Philosophy -->
   <section id="philosophy">
     <div class="inner split">
       <h2 class="slash-title">Academy Philosophy</h2>
-      <p>At ESS, <strong>intelligent repetition</strong> fuels mastery.  The academy empowers players with a toolbox of ball control, decisive 1v1 dominance, and tactical IQ—sharpened in sessions that fuse relentless practice with reflective learning. Players are coached to be <em>brave</em>, <em>creative</em>, and <em>unshakable</em> when the stakes are highest.</p>
+      <p>At ESS, <strong>intelligent repetition</strong> fuels mastery. The academy empowers players with a toolbox of ball control, decisive 1v1 dominance, and tactical IQ—sharpened in sessions that fuse relentless practice with reflective learning. Players are coached to be <em>brave</em>, <em>creative</em>, and <em>unshakable</em> when the stakes are highest.</p>
     </div>
   </section>
 
@@ -174,7 +179,6 @@
     <div class="inner" style="text-align:center;">
       <h2 class="slash-title" style="margin:auto;">Working With a Player From</h2>
       <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:3rem;margin-top:3rem;filter:grayscale(100%);opacity:.8;">
-        <!-- 8 placeholder club logos -->
         <img src="logo1.svg" alt="Club 1" width="70" />
       </div>
     </div>
@@ -183,95 +187,5 @@
   <!-- Framework -->
   <section id="framework">
     <div class="inner split">
-      <h2 class="slash-title">Academy Framework</h2>
-      <div>
-        <div class="framework-item">
-          <h4>Dynamic Ball Mastery</h4>
-          <p>This cornerstone program forges complete control via creative skill combinations, tight‑area patterns, and advanced receiving & striking practices.  Dominating the game requires strong technical foundations. At ESS Academy, the focus on dynamic ball mastery equips players with an explosive, refined, and versatile toolbox.</p>
-        </div>
-        <div class="framework-item">
-          <h4>Duels</h4>
-          <p>Players gain applied understanding of <em>when</em> and <em>where</em> to deploy their toolbox to outsmart and outlast opponents and maintain unpredictability during a duel.</p>
-        </div>
-        <div class="framework-item">
-          <h4>Game‑Related Practices</h4>
-          <p>Synergizing individual brilliance with collective transitions, these drills sharpen reading of game cues under real pressure.  This is where individual brilliance meets collective purpose.  Through possession drills, tactical scenarios, and dynamic transition play, players gain a sharper understanding of the game’s subtleties.  The academy's game-related training equips students to think ahead, adapt quickly, and perform with precision under pressure.
-</p>
-        </div>
-        <div class="framework-item">
-          <h4>Small‑Sided Games</h4>
-          <p>Fast‑paced SSGs accelerate decision‑making speed while fine‑tuning endurance and competitive edge.  With fewer players in a tighter space, each individual gets more touches on the ball and more chances to make decisions.  The fast-paced, end-to-end flow of SSGs reflects the game's transitional nature—challenging attackers to create scoring opportunities and defenders to win duels and recover possession.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2 class="slash
 
-  <!-- Services -->
-  <section id="services">
-    <div class="inner split">
-      <h2 class="slash-title">Services</h2>
-      <div>
-        <h3 style="font-size:1.2rem;font-weight:600;margin-bottom:1rem;">Academy Certification Program</h3>
-        <img src="services-img.jpg" alt="Group session" class="service-img" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Schedule -->
-  <section id="schedule">
-    <div class="inner split">
-      <h2 class="slash-title">Schedule</h2>
-      <ul class="schedule-list">
-        <li><span>Monday</span> <span> | 3:30PM – 4:30PM | 4:30PM - 5:30PM | &nbsp;</span></li>
-        <li><span>Tuesday</span> <span> | 3:30PM – 4:30PM | 4:30PM - 5:30PM | 5:30PM - 6:30PM | &nbsp;</span></li>
-        <li><span>Wednesday</span> <span> | 1:30PM - 2:30PM | 2:30PM - 3:30PM | 3:30PM - 4:30PM | 4:30PM - 5:30PM | 5:30PM - 6:30PM | &nbsp;</span></li>
-        <li><span>Thursday</span> <span> | 3:30PM – 4:30PM | 4:30PM - 5:30PM | &nbsp;</span></li>
-        <li><span>Friday</span> <span> | 3:30PM – 4:30PM | 4:30PM - 5:30PM | 5:30PM - 6:30PM | &nbsp;</span></li>
-        <li><span>Saturday</span> <span> | 11:00AM - 12:00PM | 12:00PM - 1:00PM | 1:00PM - 2:00PM | 2:00PM - 3:00PM |3:00PM - 4:00PM |4:00PM - 5:00PM | &nbsp;</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Coaches -->
-  <section id="coaches">
-    <div class="inner">
-      <h2 class="slash-title" style="margin-bottom:4rem;">Academy Coaches</h2>
-      <div class="coach-wrap">
-        <div>
-          <div class="tabs">
-            <button class="tab active" onclick="showCoach('zac', this)">Zachary</button>
-          </div>
-          <h3 style="font-size:2.5rem;line-height:1.1;margin-bottom:1rem;">"Develop Your Mind,<br/>Realize Your Potential"</h3>
-          <p id="coach-bio">Coach Zachary is the founder of ESS Academy, licensed through FC Barcelona & U.S.  He is currently completing an intensive professional diploma program with F.C. Barcelona in Soccer Coaching and Game Tactics.  He specializes in fusing technical detail and physcal prowess with mental mastery to create complete athletes.</p>
-        </div>
-        <img src="coach-zac.jpg" class="coach-img" id="coach-img" alt="Coach" />
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; <span id="yr"></span> ESS Academy. All rights reserved.
-  </footer>
-
-  <script>
-    /* Coach Tabs */
-    const bios = {
-      zac: {
-        img: 'coach-zac.jpg',
-        bio: 'Coach Zachary is the founder of ESS Academy, licensed through FC Barcelona & U.S. Soccer pathways. With a proven track record of nurturing MLS Next athletes, he specializes in fusing technical detail with mental resilience.'
-      },
-      alex: {
-        img: 'coach-alex.jpg',
-        bio: 'Coach Alex brings European academy experience, focusing on high‑tempo positional play and ball retention under pressure.'
-      }
-    }
-    function showCoach(id, el) {
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      el.classList.add('active');
-      document.getElementById('coach-img').src = bios[id].img;
-      document.getElementById('coach-bio').textContent = bios[id].bio;
-    }
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
